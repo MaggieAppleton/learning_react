@@ -24554,23 +24554,43 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel/src/builtins/css-loader.js"}],"components/HeaderComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var HeaderComponent = function HeaderComponent() {
+  return _react.default.createElement("div", {
+    className: "header"
+  }, _react.default.createElement("h1", null, "Let's do React Things."), _react.default.createElement("p", null, "Is this working yet?"));
+};
+
+var _default = HeaderComponent;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
-var _reactDom = require("react-dom");
+var _reactDom = _interopRequireDefault(require("react-dom"));
 
 require("./style.css");
 
+var _HeaderComponent = _interopRequireDefault(require("./components/HeaderComponent"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var App = function App() {
-  return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Does this still work?"));
-};
+var rootElement = document.getElementById('root');
 
-(0, _reactDom.render)(_react.default.createElement(App, null), document.getElementById("root"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./style.css":"style.css"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render(_react.default.createElement(_HeaderComponent.default, null), rootElement);
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./style.css":"style.css","./components/HeaderComponent":"components/HeaderComponent.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -24597,7 +24617,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57895" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58379" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

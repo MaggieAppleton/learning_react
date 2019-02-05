@@ -1,13 +1,9 @@
 import React from 'react'
-import { render } from 'react-dom'
+import ReactDOM from 'react-dom'
 import "./style.css"
 
-const App = () => {
-    return (
-        <div>
-            <h1>Does this still work?</h1>
-        </div>
-    )
-}
+import HeaderComponent from "./components/HeaderComponent"
 
-render (<App />, document.getElementById("root"))
+const rootElement = document.getElementById('root')
+
+ReactDOM.render( < HeaderComponent / > , rootElement)
