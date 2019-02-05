@@ -2,8 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import "./style.css"
 
-import HeaderComponent from "./components/HeaderComponent"
+import App from "./components/App"
 
 const rootElement = document.getElementById('root')
-
-ReactDOM.render( < HeaderComponent / > , rootElement)
+ReactDOM.render( < App / > , rootElement)

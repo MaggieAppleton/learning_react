@@ -24574,7 +24574,27 @@ var HeaderComponent = function HeaderComponent() {
 
 var _default = HeaderComponent;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"components/App.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _HeaderComponent = _interopRequireDefault(require("./HeaderComponent"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var App = function App() {
+  return _react.default.createElement(_HeaderComponent.default, null);
+};
+
+var _default = App;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./HeaderComponent":"components/HeaderComponent.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -24583,14 +24603,14 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 require("./style.css");
 
-var _HeaderComponent = _interopRequireDefault(require("./components/HeaderComponent"));
+var _App = _interopRequireDefault(require("./components/App"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var rootElement = document.getElementById('root');
 
-_reactDom.default.render(_react.default.createElement(_HeaderComponent.default, null), rootElement);
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./style.css":"style.css","./components/HeaderComponent":"components/HeaderComponent.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render(_react.default.createElement(_App.default, null), rootElement);
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./style.css":"style.css","./components/App":"components/App.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
