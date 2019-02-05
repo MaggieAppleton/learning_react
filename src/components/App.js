@@ -1,9 +1,12 @@
 import React from 'react'
 import HeaderComponent from './HeaderComponent'
+import Footer from './Footer'
 
 const App = () => {
     return (
-        <HeaderComponent />
+        <div><HeaderComponent />
+        <Footer />
+        < /div>
     )
 }
 

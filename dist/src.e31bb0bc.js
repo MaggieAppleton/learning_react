@@ -24568,11 +24568,31 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var HeaderComponent = function HeaderComponent() {
   return _react.default.createElement("div", {
-    className: "header"
+    className: "container header"
   }, _react.default.createElement("h1", null, "Let's do React Things."), _react.default.createElement("p", null, "Is this working yet?"));
 };
 
 var _default = HeaderComponent;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"components/Footer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer() {
+  return _react.default.createElement("div", {
+    className: "container footer"
+  }, " ", _react.default.createElement("p", null, "Brought to you by my total lack of developer know-how "), " ");
+};
+
+var _default = Footer;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js"}],"components/App.js":[function(require,module,exports) {
 "use strict";
@@ -24586,15 +24606,17 @@ var _react = _interopRequireDefault(require("react"));
 
 var _HeaderComponent = _interopRequireDefault(require("./HeaderComponent"));
 
+var _Footer = _interopRequireDefault(require("./Footer"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
-  return _react.default.createElement(_HeaderComponent.default, null);
+  return _react.default.createElement("div", null, _react.default.createElement(_HeaderComponent.default, null), _react.default.createElement(_Footer.default, null));
 };
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./HeaderComponent":"components/HeaderComponent.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./HeaderComponent":"components/HeaderComponent.js","./Footer":"components/Footer.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));

@@ -1,5 +1,21 @@
+* {
+    background-color: rgb(250, 250, 248);
+}
+
+.container {
+    padding: 2em;
+    font-size: 18px;
+    color: rgb(58, 60, 73);
+    font-family: "Avenir",
+        sans-serif;
+}
+
 .header {
     font-size: 2em;
-    font-family: "Avenir", sans-serif;
-    padding: 2em;
+}
+
+.footer {
+    border-top: 0.5px solid rgb(163, 167, 184);
+    font-size: 0.8em;
+    color: rgb(165, 171, 189);
 }
