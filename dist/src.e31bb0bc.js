@@ -24554,7 +24554,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel/src/builtins/css-loader.js"}],"components/HeaderComponent.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel/src/builtins/css-loader.js"}],"components/Header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24566,13 +24566,40 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var HeaderComponent = function HeaderComponent() {
+var Header = function Header() {
   return _react.default.createElement("div", {
     className: "container header"
-  }, _react.default.createElement("h1", null, "Let's do React Things."), _react.default.createElement("p", null, "Is this working yet?"));
+  }, _react.default.createElement("h1", null, " Let's do React Things."), " ", _react.default.createElement("p", null, "Is this working yet ?"));
 };
 
-var _default = HeaderComponent;
+var _default = Header;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"components/MainContent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Greeting(props) {
+  return _react.default.createElement("div", null, _react.default.createElement("h3", null, "Hello, ", props.firstName, " ", props.secondName));
+}
+
+var MainContent = function MainContent() {
+  return _react.default.createElement("div", {
+    className: "container"
+  }, _react.default.createElement(Greeting, {
+    firstName: "Mary",
+    secondName: "Wollstonecraft"
+  }));
+};
+
+var _default = MainContent;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js"}],"components/Footer.js":[function(require,module,exports) {
 "use strict";
@@ -24604,19 +24631,21 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _HeaderComponent = _interopRequireDefault(require("./HeaderComponent"));
+var _Header = _interopRequireDefault(require("./Header"));
+
+var _MainContent = _interopRequireDefault(require("./MainContent"));
 
 var _Footer = _interopRequireDefault(require("./Footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
-  return _react.default.createElement("div", null, _react.default.createElement(_HeaderComponent.default, null), _react.default.createElement(_Footer.default, null));
+  return _react.default.createElement("div", null, _react.default.createElement(_Header.default, null), _react.default.createElement(_MainContent.default, null), _react.default.createElement(_Footer.default, null));
 };
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./HeaderComponent":"components/HeaderComponent.js","./Footer":"components/Footer.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Header":"components/Header.js","./MainContent":"components/MainContent.js","./Footer":"components/Footer.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -24629,7 +24658,7 @@ var _App = _interopRequireDefault(require("./components/App"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var rootElement = document.getElementById('root');
+var rootElement = document.getElementById("root");
 
 _reactDom.default.render(_react.default.createElement(_App.default, null), rootElement);
 },{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./style.css":"style.css","./components/App":"components/App.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -24659,7 +24688,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58379" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59715" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -1,13 +1,16 @@
-import React from 'react'
-import HeaderComponent from './HeaderComponent'
-import Footer from './Footer'
+import React from "react";
+import Header from "./Header";
+import MainContent from "./MainContent";
+import Footer from "./Footer";
 
 const App = () => {
-    return (
-        <div><HeaderComponent />
-        <Footer />
-        < /div>
-    )
-}
+  return (
+    <div>
+      <Header />
+      <MainContent />
+      <Footer />
+    </div>
+  );
+};
 
-export default App
+export default App;
